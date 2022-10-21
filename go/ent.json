@@ -1,0 +1,52 @@
+{
+  "Adds Fields to ent Schema": {
+    "prefix": "ent-schema-fields",
+    "body": [
+      "// Fields of the $1.",
+      "func ($1) Fields() []ent.Field {",
+      "\treturn []ent.Field {$2}",
+      "}"
+    ],
+    "description": "Add fields to end schema"
+  },
+
+  "Adds Edges to ent Schema": {
+    "prefix": "ent-schema-edges",
+    "body": [
+      "// Edges of the $1.",
+      "func ($1) Edges() []ent.Edge {",
+      "\treturn []ent.Edge{$2}",
+      "}"
+    ],
+    "description": "Add Edges to end schema"
+  },
+  "Adds ent Schema": {
+    "prefix": "ent-schema",
+    "body": [
+      "// $1 holds the schema definition for the $1 entity.",
+      "type $1 struct {",
+      "\tent.Schema",
+      "}"
+    ],
+    "description": "Adds ent Schema"
+  },
+  "Adds Annotations ent Schema": {
+    "prefix": "ent-schema-annotations",
+    "body": [
+      "// Annotations of the $1.",
+      "func ($1) Annotations() []schema.Annotation {",
+      "return []schema.Annotation{$2}",
+      "}"
+    ],
+    "description": "Adds Annotations ent Schema"
+  },
+  "Adds Indexes ent Schema": {
+    "prefix": "ent-schema-indexes",
+    "body": [
+      "func ($1) Indexes() []ent.Index {",
+      "return []ent.Index{$2}",
+      "}"
+    ],
+    "description": "Adds Indexes ent Schema"
+  }
+}
